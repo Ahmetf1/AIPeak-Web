@@ -1,11 +1,11 @@
 // Almost all texts used through out the app.
 abstract class AppConstants {
-  static const appTitle = 'Kamran Bekirov';
+  static const appTitle = 'AI-PEAK';
   static const disclaimer = 'I do not claim ownership of the projects below as some of them were developed for companies I worked for and some for clients/clients of my clients while the backend side is provided.';
   static const showcaseTitle = 'SHOWCASE';
   static const showcaseDescription = 'MOBILE APPLICATIONS EITHER DEVELOPED COMPLETELY BY ME OR BY A TEAM WHERE I PARTICIPATED SIGNIFICANTLY';
-  static const landingTitle = 'KAMRAN BEKIROV';
-  static const landingMotto = 'FLUTTER BY DAY, FLUTTER BY NIGHT (INCLUDING WEEKENDS)';
+  static const landingTitle = 'AI-PEAK';
+  static const landingMotto = 'Strengthening Human Resources with Artificial Intelligence';
 
   static const webSiteURL = 'kamranbekirov.com';
   static const gitHubProfileURL = 'https://github.com/kamranbekirovyz';
