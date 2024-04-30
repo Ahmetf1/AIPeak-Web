@@ -31,11 +31,18 @@ class ShowcaseAppModel {
 
 // List of apps that will be listed on landing page.
 const apps = [
-  ShowcaseAppModel.withNetworkAsset(
-    name: 'KOLI',
-    image: 'https://play-lh.googleusercontent.com/atPmL9orJu8IbwlnyENdPm1PRnN04yoWkyT258tfQIsGek5O5Ij43b34rJoPDFphZ4_u=w3024-h1730-rw',
+  ShowcaseAppModel.withLocalAsset(
+    name: 'app 1',
+    image: 'assets/images/logo.png',
     playStoreURL: 'https://play.google.com/store/apps/details?id=az.koli.app',
     appStoreURL: 'https://apps.apple.com/az/app/koli/id1610779509',
-    topic: 'Cargo',
+    topic: 'app 1',
+  ),
+  ShowcaseAppModel.withLocalAsset(
+    name: 'app 2',
+    image: 'assets/images/logo.png',
+    playStoreURL: 'https://play.google.com/store/apps/details?id=az.koli.app',
+    appStoreURL: 'https://apps.apple.com/az/app/koli/id1610779509',
+    topic: 'app 2',
   ),
 ];

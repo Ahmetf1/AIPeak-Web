@@ -7,6 +7,9 @@ import 'package:app/landing/landing_screen.dart';
 import 'package:app/landing/widgets/animated_image_overlay.dart';
 import 'package:app/landing/widgets/external_link_button.dart';
 
+import 'package:app/apps/idle_app/idle_app_screen.dart';
+
+
 class ShowcaseAppItem extends StatelessWidget {
   final ShowcaseAppModel app;
 
@@ -14,6 +17,7 @@ class ShowcaseAppItem extends StatelessWidget {
     this.app, {
     Key? key,
   }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +38,13 @@ class ShowcaseAppItem extends StatelessWidget {
             right: 0.0,
             child: GestureDetector(
               // When overlay tapped, open full screen interactive image viewer.
-              onTap: () {
-                showGeneralDialog(
-                  context: context,
-                  pageBuilder: (_, __, ___) {
-                    return InteractiveImageViewer(
-                      image: app.image,
-                      isNetworkImage: app.isNetworkImage,
-                    );
-                  },
+              onTap: () async {
+                // Load idle app screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => IdleAppScreen(),
+                  ),
                 );
               },
               child: AnimatedImageOverlay(app.topic),
@@ -87,28 +89,15 @@ class ShowcaseAppItem extends StatelessWidget {
               ),
             ],
           ),
-          if (app.playStoreURL != null) ...[
-            ExternalLinkButton(
-              url: app.playStoreURL!,
-              iconData: FontAwesomeIcons.googlePlay,
-              label: 'Play Store',
+          // Add description text
+          const Text(
+            'This is a description of the app.',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.white,
+              height: 1.4,
             ),
-            const SizedBox(height: 10.0),
-          ],
-          if (app.appStoreURL != null) ...[
-            ExternalLinkButton(
-              url: app.appStoreURL!,
-              iconData: FontAwesomeIcons.appStoreIos,
-              label: 'App Store',
-            ),
-            const SizedBox(height: 10.0),
-          ],
-          if (app.githubURL != null)
-            ExternalLinkButton(
-              url: app.githubURL!,
-              iconData: FontAwesomeIcons.squareGithub,
-              label: 'GitHub',
-            ),
+          ),
         ],
       ),
     );
