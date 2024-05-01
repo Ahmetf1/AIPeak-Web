@@ -103,8 +103,8 @@ class LandingHeader extends StatelessWidget {
               // Personal logo
               ClipOval(
                 child: FadeInImage.assetNetwork(
-                  placeholder: 'assets/images/transparent.png',
-                  image: 'assets/images/logo.png',
+                  placeholder: 'assets/assets/images/transparent.png',
+                  image: 'assets/assets/images/logo.png',
                   width: logoSize,
                   height: logoSize,
                   fit: BoxFit.cover,
