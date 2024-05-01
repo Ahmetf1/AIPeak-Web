@@ -17,6 +17,7 @@ class SourceAwareImage extends StatelessWidget {
         ? Image.network(
             image,
           )
-        : Image.asset(image);
+        : Image(
+            image: AssetImage(image));
   }
 }

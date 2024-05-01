@@ -34,15 +34,11 @@ const apps = [
   ShowcaseAppModel.withLocalAsset(
     name: 'app 1',
     image: 'assets/images/logo.png',
-    playStoreURL: 'https://play.google.com/store/apps/details?id=az.koli.app',
-    appStoreURL: 'https://apps.apple.com/az/app/koli/id1610779509',
     topic: 'app 1',
   ),
   ShowcaseAppModel.withLocalAsset(
     name: 'app 2',
     image: 'assets/images/logo.png',
-    playStoreURL: 'https://play.google.com/store/apps/details?id=az.koli.app',
-    appStoreURL: 'https://apps.apple.com/az/app/koli/id1610779509',
     topic: 'app 2',
   ),
 ];
