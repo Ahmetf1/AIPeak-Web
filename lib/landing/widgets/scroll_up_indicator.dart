@@ -97,23 +97,11 @@ class _ScrollUpIndicatorState extends State<ScrollUpIndicator> {
   Widget _buildFlutterIndicator() {
     return GestureDetector(
       onTap: () {
-        launchUrl(AppConstants.openSourceRepoURL);
       },
       behavior: HitTestBehavior.translucent,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: const [
-          SizedBox(width: 24.0),
-          Text(
-            'BUILT\nWITH',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 10.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(width: 4.0),
-          FlutterLogo(size: 36.0),
           SizedBox(width: 24.0),
         ],
       ),

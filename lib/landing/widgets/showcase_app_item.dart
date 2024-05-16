@@ -8,7 +8,7 @@ import 'package:app/landing/widgets/animated_image_overlay.dart';
 import 'package:app/landing/widgets/external_link_button.dart';
 
 import 'package:app/apps/idle_app/idle_app_screen.dart';
-
+import 'package:app/apps/job_description/job_description_screen.dart';
 
 class ShowcaseAppItem extends StatelessWidget {
   final ShowcaseAppModel app;
@@ -39,13 +39,23 @@ class ShowcaseAppItem extends StatelessWidget {
             child: GestureDetector(
               // When overlay tapped, open full screen interactive image viewer.
               onTap: () async {
-                // Load idle app screen
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => IdleAppScreen(),
-                  ),
-                );
+                if (app.name == 'Job Description Generator') {
+                  // Load job description generator screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => JobDescriptionScreen(),
+                    ),
+                  );
+                } else if (app.name == 'Idle App') {
+                  // Load idle app screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => IdleAppScreen(),
+                    ),
+                  );
+                }
               },
               child: AnimatedImageOverlay(app.topic),
             ),
