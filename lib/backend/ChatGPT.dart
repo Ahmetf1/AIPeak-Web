@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'dart:io';
 
 class ChatGPT {
   final String apiUrl;
 
   // Read the API key from a dotenv file
-  final String apiKey = const String.fromEnvironment('OPENAI_API_KEY');
+  final String? apiKey = Platform.environment['API_URL'];
 
   ChatGPT({this.apiUrl = 'https://api.openai.com/v1/chat/completions'});
 
