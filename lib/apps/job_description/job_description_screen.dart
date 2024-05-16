@@ -29,7 +29,7 @@ class _JobDescriptionPageState extends State<JobDescriptionPage> {
   String _jobDescription = '';
   bool _isLoading = false;
 
-  final chatGPT = ChatGPT(apiKey: 'your_openai_api_key'); // Replace with your actual API key
+  final chatGPT = ChatGPT(); // Replace with your actual API key
 
   void _generateJobDescription() async {
     if (_formKey.currentState!.validate()) {

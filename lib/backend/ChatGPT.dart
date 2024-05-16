@@ -2,10 +2,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ChatGPT {
-  final String apiKey;
   final String apiUrl;
 
-  ChatGPT({required this.apiKey, this.apiUrl = 'https://api.openai.com/v1/chat/completions'});
+  final String apiKey = 'sk-proj-6f81R0ZvviptZ4kePcLxT3BlbkFJ9Zp26JbGEwBxUmNK6Ohc';
+
+  ChatGPT({this.apiUrl = 'https://api.openai.com/v1/chat/completions'});
 
   Future<String> generateJobDescription(String jobTitle, String company, String location) async {
     final prompt = "Write a job description for the position of $jobTitle at $company located in $location.";

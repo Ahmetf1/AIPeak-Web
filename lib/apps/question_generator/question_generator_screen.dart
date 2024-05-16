@@ -5,7 +5,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: QuestionCheckerPage());
+      body: QuestionCheckerPage(),
+    );
+
   }
 }
 
@@ -24,7 +26,7 @@ class _QuestionCheckerPageState extends State<QuestionCheckerPage> {
   bool _isLoading = false;
   String _difficulty = 'Very Easy';
 
-  final chatGPT = ChatGPT(apiKey: 'your_openai_api_key'); // Replace with your actual API key
+  final chatGPT = ChatGPT(); // Replace with your actual API key
 
   void _generateQuestion() async {
     if (_formKey.currentState!.validate()) {
