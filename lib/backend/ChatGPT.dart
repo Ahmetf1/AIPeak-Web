@@ -6,7 +6,7 @@ class ChatGPT {
   final String apiUrl;
 
   // Read the API key from a dotenv file
-  final String apiKey = dotenv.env['OPENAI_API_KEY']!;
+  final String apiKey = const String.fromEnvironment('OPENAI_API_KEY');
 
   ChatGPT({this.apiUrl = 'https://api.openai.com/v1/chat/completions'});
 
