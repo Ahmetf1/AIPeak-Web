@@ -11,7 +11,7 @@ class ChatGPT {
   ChatGPT({this.apiUrl = 'https://api.openai.com/v1/chat/completions'});
 
   Future<String> generateJobDescription(String jobTitle, String company, String location) async {
-    final prompt = "Write a job description for the position of $jobTitle at $company located in $location.";
+    final prompt = "title: $jobTitle, firm name: $company, location: $location";
 
     final response = await http.post(
       Uri.parse(apiUrl),
@@ -22,7 +22,7 @@ class ChatGPT {
       body: json.encode({
         'model': 'gpt-3.5-turbo',
         'messages': [
-          {'role': 'system', 'content': 'You are a helpful assistant.'},
+          {'role': 'system', 'content': 'You are an AI assistant that creates a job description for linkedin. You are given a job title, a firm name and a location.'},
           {'role': 'user', 'content': prompt},
         ],
       }),
