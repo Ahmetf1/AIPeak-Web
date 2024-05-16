@@ -28,6 +28,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/assets/images/
 
   fonts:
     - family: Ubuntu

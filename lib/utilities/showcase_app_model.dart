@@ -33,12 +33,12 @@ class ShowcaseAppModel {
 const apps = [
   ShowcaseAppModel.withLocalAsset(
     name: 'Job Description Generator',
-    image: 'assets/images/job_description_img.png',
+    image: 'assets/assets/images/job_description_img.png',
     topic: 'app 1',
   ),
   ShowcaseAppModel.withLocalAsset(
     name: 'app 2',
-    image: 'assets/images/logo.png',
+    image: 'assets/assets/images/logo.png',
     topic: 'app 2',
   ),
 ];

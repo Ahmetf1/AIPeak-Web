@@ -6,15 +6,12 @@ class JobDescriptionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Job Description Generator',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const JobDescriptionPage(),
+    return Scaffold(
+      body: const JobDescriptionPage(),
     );
   }
 }
+
 
 class JobDescriptionPage extends StatefulWidget {
   const JobDescriptionPage({super.key});
