@@ -9,6 +9,7 @@ import 'package:app/landing/widgets/external_link_button.dart';
 
 import 'package:app/apps/idle_app/idle_app_screen.dart';
 import 'package:app/apps/job_description/job_description_screen.dart';
+import 'package:app/apps/question_generator/question_generator_screen.dart';
 
 class ShowcaseAppItem extends StatelessWidget {
   final ShowcaseAppModel app;
@@ -53,6 +54,14 @@ class ShowcaseAppItem extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => IdleAppScreen(),
+                    ),
+                  );
+                } else if (app.name == 'Interview Question Generator') {
+                  // Load question generator screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuestionCheckerPage(),
                     ),
                   );
                 }

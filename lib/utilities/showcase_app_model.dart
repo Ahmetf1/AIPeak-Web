@@ -34,11 +34,16 @@ const apps = [
   ShowcaseAppModel.withLocalAsset(
     name: 'Job Description Generator',
     image: 'assets/assets/images/job_description_img.png',
-    topic: 'app 1',
+    topic: 'Generate job\ndescriptions',
+  ),
+  ShowcaseAppModel.withLocalAsset(
+    name: 'Interview Question Generator',
+    image: 'assets/assets/images/question_generator_img.png',
+    topic: 'Generate interview\nquestions',
   ),
   ShowcaseAppModel.withLocalAsset(
     name: 'app 2',
-    image: 'assets/assets/images/logo.png',
+    image: 'assets/assets/images/question_generator_img.png',
     topic: 'app 2',
   ),
 ];
